@@ -12,7 +12,7 @@ Enhanced Torii (eTorii), a distributed, multiaddress and fault-tolerant layer tw
     - Source:
       - always Switch: $n("Hier_src"s"Pos_src"): where Hier_src is de source level and Pos_src is the position on the level f.e = $n(0s0)
     - Destination
-      - For switch: $n("Hier_dst"s"Pos_dst"): represented by lines ranging from a source node to a destination node
+      - For switch: $n("Hier_dst"s"Pos_dst"): where Hier_dst is de destination level and Pos_des is the position on the level f.e = $n(1s7)
       - For host: $n(h"num_host): where h indicate host and num_host is de number of host f.e; $n(h155)
    * The result are all of HLMAC asignates for all nodes
 
