@@ -4,8 +4,25 @@ Enhanced Torii (eTorii), a distributed, multiaddress and fault-tolerant layer tw
 
 ## eGA3
 #### Simulator of the eGA3 address assignment implemented in Python
+##### About
+#
+   * the simulator executes the protocol eTorii on all hierarchical topologies located in the directory you are told , likewise these topologies must have the following format:
+    - $topJAC <- always
+    - duplex-link 
+    - Source:
+      - always Switch: $n("Hier_src"s"Pos_src"): where Hier_src is de source level and Pos_src is the position on the level f.e = $n(0s0)
+    - Destination
+      - For switch: $n("Hier_dst"s"Pos_dst"): represented by lines ranging from a source node to a destination node
+      - For host: $n(h"num_host): where h indicate host and num_host is de number of host f.e; $n(h155)
+   * The result are all of HLMAC asignates for all nodes
 
-#### Generador de topologias para el Simulador
+##### Use
+#
+```sh
+            ./etoriiAddressAssign.py
+            Subdirectory name topologies:
+```
+#### Topology Builder
 ##### About
 #
    * it generates as many as topolgies files that we want, it only need a several parameters: 
