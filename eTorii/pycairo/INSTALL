@@ -1,0 +1,24 @@
+Install Procedure
+-----------------
+
+Method 1: Python distutils (recommended method)
+--------------------------
+$ python setup.py install
+
+
+Method 2: Waf
+--------------
+$ ./waf --help     # shows available waf options
+$ ./waf configure  # use --prefix and --libdir if necessary
+                   # --prefix=/usr --libdir=/usr/lib64  for Fedora 64-bit
+$ ./waf build
+$ ./waf install
+
+Use
+$ python3 ./waf ...
+if you have python2 and python3 installed, and the default is python 2.
+
+
+Testing
+-------
+See test/README

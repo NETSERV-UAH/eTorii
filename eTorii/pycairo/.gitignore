@@ -1,0 +1,20 @@
+# top-level .gitignore
+*~
+
+*.pdf
+*.png
+*.ps
+*.pyc
+*.pyo
+*.svg
+
+.lock*
+.waf*
+waf.*
+
+build
+build_directory
+
+py3cairo.pc
+
+src/config.h
