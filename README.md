@@ -46,6 +46,7 @@ Enhanced Torii (eTorii), a distributed, multiaddress and fault-tolerant layer tw
     - Nodes are represented by circles.
     - Links : represented by lines ranging from a source node to a destination node
    * The result is four files: a PNG , a PDF, EPS and SGV , all with the representation of the topology
+
 ##### Use
 #
 ```sh
