@@ -1,0 +1,5165 @@
+version 2
+run GA3-0-20171222-01:53:07-5348
+attr configname GA3
+attr datetime 20171222-01:53:07
+attr experiment GA3
+attr inifile fig2b.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network fig2b
+attr processid 5348
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.switch1.relayUnit.isCoreSwitch true
+param *.switch2.relayUnit.isCoreSwitch true
+param *.switch1.relayUnit.corePrefix 1
+param *.switch2.relayUnit.corePrefix 2
+param *.switch*.relayUnit.timeBetweenCores 1s
+param *.switch*.relayUnit.timeBetweenPorts default
+param **.eth[*].mac.duplexMode true
+param **.eth[*].macType "\"EtherMACFullDuplexGA3\""
+param **.eth[*].queueType "\"DropTailQueue\""
+param **.switch*.relayUnitType "\"MACRelayUnitGA3\""
+param **.macTable.agingTime 120s
+
+scalar fig2b.host1.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar fig2b.host1.networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar fig2b.host1.networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar fig2b.host1.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar fig2b.host1.networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar fig2b.host1.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host1.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host1.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar fig2b.host1.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar fig2b.host1.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host1.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host1.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host1.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host1.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host1.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host1.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host1.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host1.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host1.eth[0].queue.dataQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host1.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host1.eth[0].queue.dataQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host1.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host1.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host1.eth[0].queue.dataQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host1.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host1.eth[0].mac "simulated time" 500
+scalar fig2b.host1.eth[0].mac full-duplex 1
+scalar fig2b.host1.eth[0].mac "frames/sec sent" 0
+scalar fig2b.host1.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.host1.eth[0].mac "bits/sec sent" 0
+scalar fig2b.host1.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.host1.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.host1.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.host1.eth[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.host1.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.host1.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.host1.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.host1.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.host1.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.host1.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.host1.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.host1.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.host1.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.host1.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host1.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host1.eth[0].mac droppedPkIfaceDown:count 1
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.host1.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 64
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.host1.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.host1.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.host1.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host1.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host1.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar fig2b.host1.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar fig2b.host1.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar fig2b.host1.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar fig2b.host1.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar fig2b.host1.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar fig2b.host2.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar fig2b.host2.networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar fig2b.host2.networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar fig2b.host2.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar fig2b.host2.networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar fig2b.host2.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host2.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host2.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar fig2b.host2.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar fig2b.host2.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host2.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host2.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host2.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host2.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host2.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host2.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host2.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host2.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host2.eth[0].queue.dataQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host2.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host2.eth[0].queue.dataQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host2.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host2.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host2.eth[0].queue.dataQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host2.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host2.eth[0].mac "simulated time" 500
+scalar fig2b.host2.eth[0].mac full-duplex 1
+scalar fig2b.host2.eth[0].mac "frames/sec sent" 0
+scalar fig2b.host2.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.host2.eth[0].mac "bits/sec sent" 0
+scalar fig2b.host2.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.host2.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.host2.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.host2.eth[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.host2.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.host2.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.host2.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.host2.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.host2.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.host2.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.host2.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.host2.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.host2.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.host2.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host2.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host2.eth[0].mac droppedPkIfaceDown:count 1
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.host2.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 64
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.host2.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.host2.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.host2.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host2.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host2.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar fig2b.host2.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar fig2b.host2.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar fig2b.host2.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar fig2b.host2.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar fig2b.host2.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar fig2b.host3.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar fig2b.host3.networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar fig2b.host3.networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar fig2b.host3.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar fig2b.host3.networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar fig2b.host3.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host3.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host3.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar fig2b.host3.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar fig2b.host3.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host3.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host3.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host3.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host3.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host3.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host3.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host3.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host3.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host3.eth[0].queue.dataQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host3.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host3.eth[0].queue.dataQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host3.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host3.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host3.eth[0].queue.dataQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host3.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host3.eth[0].mac "simulated time" 500
+scalar fig2b.host3.eth[0].mac full-duplex 1
+scalar fig2b.host3.eth[0].mac "frames/sec sent" 0
+scalar fig2b.host3.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.host3.eth[0].mac "bits/sec sent" 0
+scalar fig2b.host3.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.host3.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.host3.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.host3.eth[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.host3.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.host3.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.host3.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.host3.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.host3.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.host3.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.host3.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.host3.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.host3.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.host3.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host3.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host3.eth[0].mac droppedPkIfaceDown:count 1
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.host3.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 64
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.host3.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.host3.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.host3.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host3.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host3.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar fig2b.host3.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar fig2b.host3.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar fig2b.host3.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar fig2b.host3.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar fig2b.host3.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar fig2b.host4.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar fig2b.host4.networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar fig2b.host4.networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar fig2b.host4.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar fig2b.host4.networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar fig2b.host4.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host4.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host4.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar fig2b.host4.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar fig2b.host4.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host4.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host4.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host4.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host4.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host4.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host4.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host4.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host4.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host4.eth[0].queue.dataQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host4.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host4.eth[0].queue.dataQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host4.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host4.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host4.eth[0].queue.dataQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host4.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host4.eth[0].mac "simulated time" 500
+scalar fig2b.host4.eth[0].mac full-duplex 1
+scalar fig2b.host4.eth[0].mac "frames/sec sent" 0
+scalar fig2b.host4.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.host4.eth[0].mac "bits/sec sent" 0
+scalar fig2b.host4.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.host4.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.host4.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.host4.eth[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.host4.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.host4.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.host4.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.host4.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.host4.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.host4.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.host4.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.host4.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.host4.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.host4.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host4.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host4.eth[0].mac droppedPkIfaceDown:count 2
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.host4.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 128
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.host4.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.host4.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.host4.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host4.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host4.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar fig2b.host4.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar fig2b.host4.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar fig2b.host4.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar fig2b.host4.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar fig2b.host4.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar fig2b.host5.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar fig2b.host5.networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar fig2b.host5.networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar fig2b.host5.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar fig2b.host5.networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar fig2b.host5.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host5.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host5.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar fig2b.host5.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar fig2b.host5.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host5.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host5.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host5.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host5.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host5.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host5.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host5.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host5.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host5.eth[0].queue.dataQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host5.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host5.eth[0].queue.dataQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host5.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host5.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host5.eth[0].queue.dataQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host5.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host5.eth[0].mac "simulated time" 500
+scalar fig2b.host5.eth[0].mac full-duplex 1
+scalar fig2b.host5.eth[0].mac "frames/sec sent" 0
+scalar fig2b.host5.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.host5.eth[0].mac "bits/sec sent" 0
+scalar fig2b.host5.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.host5.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.host5.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.host5.eth[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.host5.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.host5.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.host5.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.host5.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.host5.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.host5.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.host5.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.host5.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.host5.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.host5.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host5.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host5.eth[0].mac droppedPkIfaceDown:count 2
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.host5.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 128
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.host5.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.host5.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.host5.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host5.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host5.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar fig2b.host5.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar fig2b.host5.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar fig2b.host5.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar fig2b.host5.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar fig2b.host5.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar fig2b.host6.networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar fig2b.host6.networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar fig2b.host6.networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar fig2b.host6.networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar fig2b.host6.networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar fig2b.host6.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host6.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host6.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar fig2b.host6.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar fig2b.host6.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host6.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host6.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host6.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host6.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host6.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host6.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host6.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host6.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host6.eth[0].queue.dataQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.host6.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.host6.eth[0].queue.dataQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.host6.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.host6.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.host6.eth[0].queue.dataQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.host6.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.host6.eth[0].mac "simulated time" 500
+scalar fig2b.host6.eth[0].mac full-duplex 1
+scalar fig2b.host6.eth[0].mac "frames/sec sent" 0
+scalar fig2b.host6.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.host6.eth[0].mac "bits/sec sent" 0
+scalar fig2b.host6.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.host6.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.host6.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.host6.eth[0].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.host6.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.host6.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.host6.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.host6.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.host6.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.host6.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.host6.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.host6.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.host6.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.host6.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.host6.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.host6.eth[0].mac droppedPkIfaceDown:count 2
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.host6.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 128
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.host6.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.host6.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.host6.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.host6.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.host6.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar fig2b.host6.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar fig2b.host6.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar fig2b.host6.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar fig2b.host6.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar fig2b.host6.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar fig2b.switch5.relayUnit "processed frames" 2
+scalar fig2b.switch5.relayUnit "discarded frames" 0
+scalar fig2b.switch5.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[0].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].mac "simulated time" 500
+scalar fig2b.switch5.eth[0].mac full-duplex 1
+scalar fig2b.switch5.eth[0].mac "frames/sec sent" 0.002
+scalar fig2b.switch5.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.switch5.eth[0].mac "bits/sec sent" 1.024
+scalar fig2b.switch5.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.switch5.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.switch5.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.switch5.eth[0].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch5.eth[0].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch5.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch5.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch5.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch5.eth[0].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch5.eth[0].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch5.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch5.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch5.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch5.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch5.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch5.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[1].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[1].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[1].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[1].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[1].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[1].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[1].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[1].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[1].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[1].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].mac "simulated time" 500
+scalar fig2b.switch5.eth[1].mac full-duplex 1
+scalar fig2b.switch5.eth[1].mac "frames/sec sent" 0.002
+scalar fig2b.switch5.eth[1].mac "frames/sec rcvd" 0
+scalar fig2b.switch5.eth[1].mac "bits/sec sent" 1.024
+scalar fig2b.switch5.eth[1].mac "bits/sec rcvd" 0
+scalar fig2b.switch5.eth[1].mac "rx channel idle (%)" 100
+scalar fig2b.switch5.eth[1].mac "rx channel utilization (%)" 0
+scalar fig2b.switch5.eth[1].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch5.eth[1].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch5.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch5.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch5.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch5.eth[1].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch5.eth[1].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch5.eth[1].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch5.eth[1].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch5.eth[1].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch5.eth[1].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch5.eth[1].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch5.eth[1].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[2].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[2].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[2].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[2].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[2].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[2].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[2].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[2].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[2].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[2].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].mac "simulated time" 500
+scalar fig2b.switch5.eth[2].mac full-duplex 1
+scalar fig2b.switch5.eth[2].mac "frames/sec sent" 0.002
+scalar fig2b.switch5.eth[2].mac "frames/sec rcvd" 0
+scalar fig2b.switch5.eth[2].mac "bits/sec sent" 1.024
+scalar fig2b.switch5.eth[2].mac "bits/sec rcvd" 0
+scalar fig2b.switch5.eth[2].mac "rx channel idle (%)" 100
+scalar fig2b.switch5.eth[2].mac "rx channel utilization (%)" 0
+scalar fig2b.switch5.eth[2].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch5.eth[2].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch5.eth[2].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch5.eth[2].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch5.eth[2].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch5.eth[2].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch5.eth[2].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch5.eth[2].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch5.eth[2].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch5.eth[2].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch5.eth[2].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch5.eth[2].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch5.eth[2].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[3].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[3].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[3].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[3].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[3].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].queue.dataQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[3].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[3].queue.dataQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[3].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[3].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].queue.dataQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[3].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].mac "simulated time" 500
+scalar fig2b.switch5.eth[3].mac full-duplex 1
+scalar fig2b.switch5.eth[3].mac "frames/sec sent" 0
+scalar fig2b.switch5.eth[3].mac "frames/sec rcvd" 0.002
+scalar fig2b.switch5.eth[3].mac "bits/sec sent" 0
+scalar fig2b.switch5.eth[3].mac "bits/sec rcvd" 1.024
+scalar fig2b.switch5.eth[3].mac "rx channel idle (%)" 99.999998848
+scalar fig2b.switch5.eth[3].mac "rx channel utilization (%)" 1.152e-006
+scalar fig2b.switch5.eth[3].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch5.eth[3].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch5.eth[3].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch5.eth[3].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch5.eth[3].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch5.eth[3].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch5.eth[3].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch5.eth[3].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch5.eth[3].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch5.eth[3].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].mac rxPkOk:count 1
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch5.eth[3].mac rxPkOk:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch5.eth[3].mac passedUpPk:count 1
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch5.eth[3].mac passedUpPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[4].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[4].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[4].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[4].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[4].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch5.eth[4].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch5.eth[4].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch5.eth[4].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch5.eth[4].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch5.eth[4].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].mac "simulated time" 500
+scalar fig2b.switch5.eth[4].mac full-duplex 1
+scalar fig2b.switch5.eth[4].mac "frames/sec sent" 0.002
+scalar fig2b.switch5.eth[4].mac "frames/sec rcvd" 0.002
+scalar fig2b.switch5.eth[4].mac "bits/sec sent" 1.024
+scalar fig2b.switch5.eth[4].mac "bits/sec rcvd" 1.024
+scalar fig2b.switch5.eth[4].mac "rx channel idle (%)" 99.999998848
+scalar fig2b.switch5.eth[4].mac "rx channel utilization (%)" 1.152e-006
+scalar fig2b.switch5.eth[4].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch5.eth[4].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch5.eth[4].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch5.eth[4].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch5.eth[4].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch5.eth[4].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch5.eth[4].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch5.eth[4].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch5.eth[4].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch5.eth[4].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].mac rxPkOk:count 1
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch5.eth[4].mac rxPkOk:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch5.eth[4].mac passedUpPk:count 1
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch5.eth[4].mac passedUpPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch6.relayUnit "processed frames" 3
+scalar fig2b.switch6.relayUnit "discarded frames" 0
+scalar fig2b.switch6.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[0].queue.dataQueue queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].queue.dataQueue rcvdPk:count 2
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 128
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].mac "simulated time" 500
+scalar fig2b.switch6.eth[0].mac full-duplex 1
+scalar fig2b.switch6.eth[0].mac "frames/sec sent" 0.004
+scalar fig2b.switch6.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.switch6.eth[0].mac "bits/sec sent" 2.048
+scalar fig2b.switch6.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.switch6.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.switch6.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.switch6.eth[0].mac rxPkFromHL:count 2
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch6.eth[0].mac rxPkFromHL:sum(packetBytes) 128
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch6.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch6.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch6.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch6.eth[0].mac txPk:count 2
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch6.eth[0].mac txPk:sum(packetBytes) 128
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch6.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch6.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch6.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch6.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch6.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch6.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[1].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[1].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[1].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[1].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[1].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[1].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[1].queue.dataQueue queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[1].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[1].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].queue.dataQueue rcvdPk:count 2
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[1].queue.dataQueue rcvdPk:sum(packetBytes) 128
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].mac "simulated time" 500
+scalar fig2b.switch6.eth[1].mac full-duplex 1
+scalar fig2b.switch6.eth[1].mac "frames/sec sent" 0.004
+scalar fig2b.switch6.eth[1].mac "frames/sec rcvd" 0
+scalar fig2b.switch6.eth[1].mac "bits/sec sent" 2.048
+scalar fig2b.switch6.eth[1].mac "bits/sec rcvd" 0
+scalar fig2b.switch6.eth[1].mac "rx channel idle (%)" 100
+scalar fig2b.switch6.eth[1].mac "rx channel utilization (%)" 0
+scalar fig2b.switch6.eth[1].mac rxPkFromHL:count 2
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch6.eth[1].mac rxPkFromHL:sum(packetBytes) 128
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch6.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch6.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch6.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch6.eth[1].mac txPk:count 2
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch6.eth[1].mac txPk:sum(packetBytes) 128
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch6.eth[1].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch6.eth[1].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch6.eth[1].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch6.eth[1].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch6.eth[1].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch6.eth[1].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[2].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[2].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[2].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[2].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[2].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[2].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[2].queue.dataQueue queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[2].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[2].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].queue.dataQueue rcvdPk:count 2
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[2].queue.dataQueue rcvdPk:sum(packetBytes) 128
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].mac "simulated time" 500
+scalar fig2b.switch6.eth[2].mac full-duplex 1
+scalar fig2b.switch6.eth[2].mac "frames/sec sent" 0.004
+scalar fig2b.switch6.eth[2].mac "frames/sec rcvd" 0
+scalar fig2b.switch6.eth[2].mac "bits/sec sent" 2.048
+scalar fig2b.switch6.eth[2].mac "bits/sec rcvd" 0
+scalar fig2b.switch6.eth[2].mac "rx channel idle (%)" 100
+scalar fig2b.switch6.eth[2].mac "rx channel utilization (%)" 0
+scalar fig2b.switch6.eth[2].mac rxPkFromHL:count 2
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch6.eth[2].mac rxPkFromHL:sum(packetBytes) 128
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch6.eth[2].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch6.eth[2].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch6.eth[2].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch6.eth[2].mac txPk:count 2
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch6.eth[2].mac txPk:sum(packetBytes) 128
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch6.eth[2].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch6.eth[2].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch6.eth[2].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch6.eth[2].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch6.eth[2].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch6.eth[2].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[3].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[3].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[3].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[3].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[3].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[3].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[3].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[3].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[3].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[3].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].mac "simulated time" 500
+scalar fig2b.switch6.eth[3].mac full-duplex 1
+scalar fig2b.switch6.eth[3].mac "frames/sec sent" 0.002
+scalar fig2b.switch6.eth[3].mac "frames/sec rcvd" 0.002
+scalar fig2b.switch6.eth[3].mac "bits/sec sent" 1.024
+scalar fig2b.switch6.eth[3].mac "bits/sec rcvd" 1.024
+scalar fig2b.switch6.eth[3].mac "rx channel idle (%)" 99.999998848
+scalar fig2b.switch6.eth[3].mac "rx channel utilization (%)" 1.152e-006
+scalar fig2b.switch6.eth[3].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch6.eth[3].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch6.eth[3].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch6.eth[3].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch6.eth[3].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch6.eth[3].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch6.eth[3].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch6.eth[3].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch6.eth[3].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch6.eth[3].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].mac rxPkOk:count 1
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch6.eth[3].mac rxPkOk:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch6.eth[3].mac passedUpPk:count 1
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch6.eth[3].mac passedUpPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[4].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[4].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[4].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[4].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[4].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch6.eth[4].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch6.eth[4].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch6.eth[4].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch6.eth[4].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch6.eth[4].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].mac "simulated time" 500
+scalar fig2b.switch6.eth[4].mac full-duplex 1
+scalar fig2b.switch6.eth[4].mac "frames/sec sent" 0.002
+scalar fig2b.switch6.eth[4].mac "frames/sec rcvd" 0.004
+scalar fig2b.switch6.eth[4].mac "bits/sec sent" 1.024
+scalar fig2b.switch6.eth[4].mac "bits/sec rcvd" 2.048
+scalar fig2b.switch6.eth[4].mac "rx channel idle (%)" 99.999997696
+scalar fig2b.switch6.eth[4].mac "rx channel utilization (%)" 2.304e-006
+scalar fig2b.switch6.eth[4].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch6.eth[4].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch6.eth[4].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch6.eth[4].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch6.eth[4].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch6.eth[4].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch6.eth[4].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch6.eth[4].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch6.eth[4].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch6.eth[4].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].mac rxPkOk:count 2
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch6.eth[4].mac rxPkOk:sum(packetBytes) 128
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch6.eth[4].mac passedUpPk:count 2
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch6.eth[4].mac passedUpPk:sum(packetBytes) 128
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch3.relayUnit "processed frames" 2
+scalar fig2b.switch3.relayUnit "discarded frames" 0
+scalar fig2b.switch3.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch3.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch3.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch3.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch3.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch3.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch3.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch3.eth[0].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch3.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch3.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch3.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].mac "simulated time" 500
+scalar fig2b.switch3.eth[0].mac full-duplex 1
+scalar fig2b.switch3.eth[0].mac "frames/sec sent" 0.002
+scalar fig2b.switch3.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.switch3.eth[0].mac "bits/sec sent" 1.024
+scalar fig2b.switch3.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.switch3.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.switch3.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.switch3.eth[0].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch3.eth[0].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch3.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch3.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch3.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch3.eth[0].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch3.eth[0].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch3.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch3.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch3.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch3.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch3.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch3.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch3.eth[1].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch3.eth[1].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch3.eth[1].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch3.eth[1].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch3.eth[1].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch3.eth[1].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch3.eth[1].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch3.eth[1].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch3.eth[1].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch3.eth[1].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].mac "simulated time" 500
+scalar fig2b.switch3.eth[1].mac full-duplex 1
+scalar fig2b.switch3.eth[1].mac "frames/sec sent" 0.002
+scalar fig2b.switch3.eth[1].mac "frames/sec rcvd" 0.002
+scalar fig2b.switch3.eth[1].mac "bits/sec sent" 1.024
+scalar fig2b.switch3.eth[1].mac "bits/sec rcvd" 1.024
+scalar fig2b.switch3.eth[1].mac "rx channel idle (%)" 99.999998848
+scalar fig2b.switch3.eth[1].mac "rx channel utilization (%)" 1.152e-006
+scalar fig2b.switch3.eth[1].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch3.eth[1].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch3.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch3.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch3.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch3.eth[1].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch3.eth[1].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch3.eth[1].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch3.eth[1].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch3.eth[1].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].mac rxPkOk:count 1
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch3.eth[1].mac rxPkOk:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch3.eth[1].mac passedUpPk:count 1
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch3.eth[1].mac passedUpPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch3.eth[2].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch3.eth[2].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch3.eth[2].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch3.eth[2].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch3.eth[2].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].queue.dataQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch3.eth[2].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch3.eth[2].queue.dataQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch3.eth[2].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch3.eth[2].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].queue.dataQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch3.eth[2].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].mac "simulated time" 500
+scalar fig2b.switch3.eth[2].mac full-duplex 1
+scalar fig2b.switch3.eth[2].mac "frames/sec sent" 0
+scalar fig2b.switch3.eth[2].mac "frames/sec rcvd" 0.002
+scalar fig2b.switch3.eth[2].mac "bits/sec sent" 0
+scalar fig2b.switch3.eth[2].mac "bits/sec rcvd" 1.024
+scalar fig2b.switch3.eth[2].mac "rx channel idle (%)" 99.999998848
+scalar fig2b.switch3.eth[2].mac "rx channel utilization (%)" 1.152e-006
+scalar fig2b.switch3.eth[2].mac rxPkFromHL:count 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch3.eth[2].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch3.eth[2].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch3.eth[2].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch3.eth[2].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch3.eth[2].mac txPk:count 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch3.eth[2].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch3.eth[2].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch3.eth[2].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch3.eth[2].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].mac rxPkOk:count 1
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch3.eth[2].mac rxPkOk:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch3.eth[2].mac passedUpPk:count 1
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch3.eth[2].mac passedUpPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch4.relayUnit "processed frames" 4
+scalar fig2b.switch4.relayUnit "discarded frames" 0
+scalar fig2b.switch4.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch4.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch4.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch4.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch4.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch4.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch4.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch4.eth[0].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch4.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch4.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch4.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].mac "simulated time" 500
+scalar fig2b.switch4.eth[0].mac full-duplex 1
+scalar fig2b.switch4.eth[0].mac "frames/sec sent" 0.002
+scalar fig2b.switch4.eth[0].mac "frames/sec rcvd" 0.004
+scalar fig2b.switch4.eth[0].mac "bits/sec sent" 1.024
+scalar fig2b.switch4.eth[0].mac "bits/sec rcvd" 2.048
+scalar fig2b.switch4.eth[0].mac "rx channel idle (%)" 99.999997696
+scalar fig2b.switch4.eth[0].mac "rx channel utilization (%)" 2.304e-006
+scalar fig2b.switch4.eth[0].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch4.eth[0].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch4.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch4.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch4.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch4.eth[0].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch4.eth[0].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch4.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch4.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch4.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].mac rxPkOk:count 2
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch4.eth[0].mac rxPkOk:sum(packetBytes) 128
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch4.eth[0].mac passedUpPk:count 2
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch4.eth[0].mac passedUpPk:sum(packetBytes) 128
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch4.eth[1].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch4.eth[1].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch4.eth[1].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch4.eth[1].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch4.eth[1].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch4.eth[1].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch4.eth[1].queue.dataQueue queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch4.eth[1].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch4.eth[1].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].queue.dataQueue rcvdPk:count 2
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch4.eth[1].queue.dataQueue rcvdPk:sum(packetBytes) 128
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].mac "simulated time" 500
+scalar fig2b.switch4.eth[1].mac full-duplex 1
+scalar fig2b.switch4.eth[1].mac "frames/sec sent" 0.004
+scalar fig2b.switch4.eth[1].mac "frames/sec rcvd" 0.002
+scalar fig2b.switch4.eth[1].mac "bits/sec sent" 2.048
+scalar fig2b.switch4.eth[1].mac "bits/sec rcvd" 1.024
+scalar fig2b.switch4.eth[1].mac "rx channel idle (%)" 99.999998848
+scalar fig2b.switch4.eth[1].mac "rx channel utilization (%)" 1.152e-006
+scalar fig2b.switch4.eth[1].mac rxPkFromHL:count 2
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch4.eth[1].mac rxPkFromHL:sum(packetBytes) 128
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch4.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch4.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch4.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch4.eth[1].mac txPk:count 2
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch4.eth[1].mac txPk:sum(packetBytes) 128
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch4.eth[1].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch4.eth[1].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch4.eth[1].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].mac rxPkOk:count 1
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch4.eth[1].mac rxPkOk:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch4.eth[1].mac passedUpPk:count 1
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch4.eth[1].mac passedUpPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch4.eth[2].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch4.eth[2].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch4.eth[2].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch4.eth[2].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch4.eth[2].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch4.eth[2].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch4.eth[2].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch4.eth[2].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch4.eth[2].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch4.eth[2].queue.dataQueue rcvdPk:sum(packetBytes) 64
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].mac "simulated time" 500
+scalar fig2b.switch4.eth[2].mac full-duplex 1
+scalar fig2b.switch4.eth[2].mac "frames/sec sent" 0.002
+scalar fig2b.switch4.eth[2].mac "frames/sec rcvd" 0.002
+scalar fig2b.switch4.eth[2].mac "bits/sec sent" 1.024
+scalar fig2b.switch4.eth[2].mac "bits/sec rcvd" 1.024
+scalar fig2b.switch4.eth[2].mac "rx channel idle (%)" 99.999998848
+scalar fig2b.switch4.eth[2].mac "rx channel utilization (%)" 1.152e-006
+scalar fig2b.switch4.eth[2].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch4.eth[2].mac rxPkFromHL:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch4.eth[2].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch4.eth[2].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch4.eth[2].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch4.eth[2].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch4.eth[2].mac txPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch4.eth[2].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch4.eth[2].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch4.eth[2].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].mac rxPkOk:count 1
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch4.eth[2].mac rxPkOk:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch4.eth[2].mac passedUpPk:count 1
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch4.eth[2].mac passedUpPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch1.relayUnit "processed frames" 0
+scalar fig2b.switch1.relayUnit "discarded frames" 0
+scalar fig2b.switch1.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch1.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch1.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch1.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch1.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch1.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch1.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch1.eth[0].queue.dataQueue queueingTime:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	1
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch1.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch1.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].queue.dataQueue rcvdPk:count 1
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch1.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].mac "simulated time" 500
+scalar fig2b.switch1.eth[0].mac full-duplex 1
+scalar fig2b.switch1.eth[0].mac "frames/sec sent" 0.002
+scalar fig2b.switch1.eth[0].mac "frames/sec rcvd" 0
+scalar fig2b.switch1.eth[0].mac "bits/sec sent" 0
+scalar fig2b.switch1.eth[0].mac "bits/sec rcvd" 0
+scalar fig2b.switch1.eth[0].mac "rx channel idle (%)" 100
+scalar fig2b.switch1.eth[0].mac "rx channel utilization (%)" 0
+scalar fig2b.switch1.eth[0].mac rxPkFromHL:count 1
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch1.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch1.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch1.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch1.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch1.eth[0].mac txPk:count 1
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch1.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch1.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch1.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch1.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch1.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch1.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch1.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar fig2b.switch2.relayUnit "processed frames" 1
+scalar fig2b.switch2.relayUnit "discarded frames" 0
+scalar fig2b.switch2.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch2.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch2.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch2.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch2.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].queue.pauseQueue rcvdPk:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch2.eth[0].queue.pauseQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar fig2b.switch2.eth[0].queue.dataQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic fig2b.switch2.eth[0].queue.dataQueue queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar fig2b.switch2.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar fig2b.switch2.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].queue.dataQueue rcvdPk:count 2
+attr interpolationmode none
+attr title "received packets, count"
+scalar fig2b.switch2.eth[0].queue.dataQueue rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].mac "simulated time" 500
+scalar fig2b.switch2.eth[0].mac full-duplex 1
+scalar fig2b.switch2.eth[0].mac "frames/sec sent" 0.004
+scalar fig2b.switch2.eth[0].mac "frames/sec rcvd" 0.002
+scalar fig2b.switch2.eth[0].mac "bits/sec sent" 0
+scalar fig2b.switch2.eth[0].mac "bits/sec rcvd" 1.024
+scalar fig2b.switch2.eth[0].mac "rx channel idle (%)" 99.999998848
+scalar fig2b.switch2.eth[0].mac "rx channel utilization (%)" 1.152e-006
+scalar fig2b.switch2.eth[0].mac rxPkFromHL:count 2
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, count"
+scalar fig2b.switch2.eth[0].mac rxPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar fig2b.switch2.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar fig2b.switch2.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar fig2b.switch2.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar fig2b.switch2.eth[0].mac txPk:count 2
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, count"
+scalar fig2b.switch2.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar fig2b.switch2.eth[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].mac droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar fig2b.switch2.eth[0].mac droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].mac droppedPkIfaceDown:count 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, count"
+scalar fig2b.switch2.eth[0].mac droppedPkIfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].mac rxPkOk:count 1
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar fig2b.switch2.eth[0].mac rxPkOk:sum(packetBytes) 64
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar fig2b.switch2.eth[0].mac passedUpPk:count 1
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar fig2b.switch2.eth[0].mac passedUpPk:sum(packetBytes) 64
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+

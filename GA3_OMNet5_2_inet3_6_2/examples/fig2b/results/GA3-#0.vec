@@ -1,0 +1,708 @@
+version 2
+run GA3-0-20171222-01:53:07-5348
+attr configname GA3
+attr datetime 20171222-01:53:07
+attr experiment GA3
+attr inifile fig2b.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network fig2b
+attr processid 5348
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.switch1.relayUnit.isCoreSwitch true
+param *.switch2.relayUnit.isCoreSwitch true
+param *.switch1.relayUnit.corePrefix 1
+param *.switch2.relayUnit.corePrefix 2
+param *.switch*.relayUnit.timeBetweenCores 1s
+param *.switch*.relayUnit.timeBetweenPorts default
+param **.eth[*].mac.duplexMode true
+param **.eth[*].macType "\"EtherMACFullDuplexGA3\""
+param **.eth[*].queueType "\"DropTailQueue\""
+param **.switch*.relayUnitType "\"MACRelayUnitGA3\""
+param **.macTable.agingTime 120s
+
+vector 0 fig2b.host1.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 fig2b.host1.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 fig2b.host2.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 fig2b.host2.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 4 fig2b.host3.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 5 fig2b.host3.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 6 fig2b.host4.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 7 fig2b.host4.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 8 fig2b.host5.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 9 fig2b.host5.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 10 fig2b.host6.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 11 fig2b.host6.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 12 fig2b.switch5.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 13 fig2b.switch5.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 14 fig2b.switch5.eth[1].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 15 fig2b.switch5.eth[1].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 16 fig2b.switch5.eth[2].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 17 fig2b.switch5.eth[2].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 18 fig2b.switch5.eth[3].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 19 fig2b.switch5.eth[3].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 20 fig2b.switch5.eth[4].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 21 fig2b.switch5.eth[4].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 22 fig2b.switch6.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 23 fig2b.switch6.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 24 fig2b.switch6.eth[1].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 25 fig2b.switch6.eth[1].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 26 fig2b.switch6.eth[2].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 27 fig2b.switch6.eth[2].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 28 fig2b.switch6.eth[3].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 29 fig2b.switch6.eth[3].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 30 fig2b.switch6.eth[4].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 31 fig2b.switch6.eth[4].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 32 fig2b.switch3.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 33 fig2b.switch3.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 34 fig2b.switch3.eth[1].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 35 fig2b.switch3.eth[1].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 36 fig2b.switch3.eth[2].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 37 fig2b.switch3.eth[2].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 38 fig2b.switch4.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 39 fig2b.switch4.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 40 fig2b.switch4.eth[1].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 41 fig2b.switch4.eth[1].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 42 fig2b.switch4.eth[2].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 43 fig2b.switch4.eth[2].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 44 fig2b.switch1.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 45 fig2b.switch1.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 46 fig2b.switch2.eth[0].queue.pauseQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 47 fig2b.switch2.eth[0].queue.dataQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 48 fig2b.switch1.eth[0].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 49 fig2b.switch1.eth[0].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 50 fig2b.switch1.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 51 fig2b.switch1.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 52 fig2b.switch3.eth[2].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 53 fig2b.switch3.eth[2].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 54 fig2b.switch3.eth[0].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 55 fig2b.switch3.eth[0].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 56 fig2b.switch3.eth[1].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 57 fig2b.switch3.eth[1].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 58 fig2b.switch3.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 59 fig2b.switch3.eth[1].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 60 fig2b.switch3.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 61 fig2b.switch3.eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 62 fig2b.switch5.eth[3].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 63 fig2b.switch5.eth[3].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 64 fig2b.switch6.eth[3].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 65 fig2b.switch6.eth[3].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 66 fig2b.switch5.eth[0].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 67 fig2b.switch5.eth[0].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 68 fig2b.switch5.eth[1].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 69 fig2b.switch5.eth[1].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 70 fig2b.switch5.eth[2].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 71 fig2b.switch5.eth[2].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 72 fig2b.switch5.eth[4].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 73 fig2b.switch5.eth[4].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 74 fig2b.switch6.eth[0].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 75 fig2b.switch6.eth[0].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 76 fig2b.switch6.eth[1].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 77 fig2b.switch6.eth[1].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 78 fig2b.switch6.eth[2].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 79 fig2b.switch6.eth[2].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 80 fig2b.switch6.eth[4].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 81 fig2b.switch6.eth[4].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 82 fig2b.switch5.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 83 fig2b.switch5.eth[1].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 84 fig2b.switch5.eth[2].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 85 fig2b.switch5.eth[4].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 86 fig2b.switch6.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 87 fig2b.switch6.eth[1].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 88 fig2b.switch6.eth[2].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 89 fig2b.switch6.eth[4].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 90 fig2b.switch5.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 91 fig2b.switch5.eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 92 fig2b.switch5.eth[2].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 93 fig2b.switch5.eth[4].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 94 fig2b.switch6.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 95 fig2b.switch6.eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 96 fig2b.switch6.eth[2].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 97 fig2b.switch6.eth[4].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 98 fig2b.host1.eth[0].mac droppedPkIfaceDown:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, vector(packetBytes)"
+vector 99 fig2b.host2.eth[0].mac droppedPkIfaceDown:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, vector(packetBytes)"
+vector 100 fig2b.host3.eth[0].mac droppedPkIfaceDown:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, vector(packetBytes)"
+vector 101 fig2b.switch4.eth[2].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 102 fig2b.switch4.eth[2].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 103 fig2b.host4.eth[0].mac droppedPkIfaceDown:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, vector(packetBytes)"
+vector 104 fig2b.host5.eth[0].mac droppedPkIfaceDown:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, vector(packetBytes)"
+vector 105 fig2b.host6.eth[0].mac droppedPkIfaceDown:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkIfaceDown
+attr title "packets dropped/interface down, vector(packetBytes)"
+vector 106 fig2b.switch4.eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 107 fig2b.switch4.eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 108 fig2b.switch4.eth[0].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 109 fig2b.switch4.eth[0].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 110 fig2b.switch4.eth[1].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 111 fig2b.switch4.eth[1].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 112 fig2b.switch4.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 113 fig2b.switch4.eth[1].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 114 fig2b.switch4.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 115 fig2b.switch4.eth[1].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 116 fig2b.switch2.eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 117 fig2b.switch2.eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 118 fig2b.switch6.eth[4].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 119 fig2b.switch6.eth[4].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 120 fig2b.switch2.eth[0].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 121 fig2b.switch2.eth[0].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 122 fig2b.switch6.eth[3].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 123 fig2b.switch6.eth[3].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 124 fig2b.switch2.eth[0].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 125 fig2b.switch6.eth[3].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 126 fig2b.switch2.eth[0].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 127 fig2b.switch6.eth[3].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 128 fig2b.switch4.eth[0].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 129 fig2b.switch4.eth[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 130 fig2b.switch3.eth[1].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 131 fig2b.switch3.eth[1].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 132 fig2b.switch4.eth[2].queue.dataQueue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 133 fig2b.switch4.eth[2].queue.dataQueue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 134 fig2b.switch4.eth[2].mac rxPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkFromHL
+attr title "packet bytes from higher layer, vector(packetBytes)"
+vector 135 fig2b.switch4.eth[2].mac txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source txPk
+attr title "packets transmitted, vector(packetBytes)"
+vector 136 fig2b.switch5.eth[4].mac rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, vector(packetBytes)"
+vector 137 fig2b.switch5.eth[4].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+0	0	0	0
+1	0	0	0
+2	0	0	0
+3	0	0	0
+4	0	0	0
+5	0	0	0
+6	0	0	0
+7	0	0	0
+8	0	0	0
+9	0	0	0
+10	0	0	0
+11	0	0	0
+12	0	0	0
+13	0	0	0
+13	44	0.00001172	1
+13	44	0.00001172	0
+14	0	0	0
+15	0	0	0
+15	45	0.00001172	1
+15	45	0.00001172	0
+16	0	0	0
+17	0	0	0
+17	46	0.00001172	1
+17	46	0.00001172	0
+18	0	0	0
+19	0	0	0
+20	0	0	0
+21	0	0	0
+21	47	0.00001172	1
+21	47	0.00001172	0
+22	0	0	0
+23	0	0	0
+23	48	0.00001172	1
+23	48	0.00001172	0
+23	116	0.00002344	1
+23	116	0.00002344	0
+24	0	0	0
+25	0	0	0
+25	49	0.00001172	1
+25	49	0.00001172	0
+25	117	0.00002344	1
+25	117	0.00002344	0
+26	0	0	0
+27	0	0	0
+27	50	0.00001172	1
+27	50	0.00001172	0
+27	118	0.00002344	1
+27	118	0.00002344	0
+28	0	0	0
+29	0	0	0
+29	119	0.00002344	1
+29	119	0.00002344	0
+30	0	0	0
+31	0	0	0
+31	51	0.00001172	1
+31	51	0.00001172	0
+32	0	0	0
+33	0	0	0
+33	23	0.00000586	1
+33	23	0.00000586	0
+34	0	0	0
+35	0	0	0
+35	24	0.00000586	1
+35	24	0.00000586	0
+36	0	0	0
+37	0	0	0
+38	0	0	0
+39	0	0	0
+39	90	0.00001758	1
+39	90	0.00001758	0
+40	0	0	0
+41	0	0	0
+41	91	0.00001758	1
+41	91	0.00001758	0
+41	146	0.0000293	1
+41	146	0.0000293	0
+42	0	0	0
+43	0	0	0
+43	147	0.0000293	1
+43	147	0.0000293	0
+44	0	0	0
+45	0	0	0
+45	15	0	1
+45	15	0	0
+46	0	0	0
+47	0	0	0
+47	115	0.00002344	1
+47	115	0.00002344	0
+47	167	1	1
+47	167	1	0
+48	15	0	0
+49	15	0	0
+50	17	0	0
+51	18	0.00000576	0
+52	19	0.00000586	64
+53	19	0.00000586	64
+54	23	0.00000586	64
+55	23	0.00000586	0
+56	24	0.00000586	64
+57	24	0.00000586	0
+58	27	0.00000586	64
+59	28	0.00000586	64
+60	30	0.00001162	64
+61	31	0.00001162	64
+62	32	0.00001172	64
+63	32	0.00001172	64
+64	33	0.00001172	64
+65	33	0.00001172	64
+66	44	0.00001172	64
+67	44	0.00001172	0
+68	45	0.00001172	64
+69	45	0.00001172	0
+70	46	0.00001172	64
+71	46	0.00001172	0
+72	47	0.00001172	64
+73	47	0.00001172	0
+74	48	0.00001172	64
+74	116	0.00002344	64
+75	48	0.00001172	0
+75	116	0.00002344	0
+76	49	0.00001172	64
+76	117	0.00002344	64
+77	49	0.00001172	0
+77	117	0.00002344	0
+78	50	0.00001172	64
+78	118	0.00002344	64
+79	50	0.00001172	0
+79	118	0.00002344	0
+80	51	0.00001172	64
+81	51	0.00001172	0
+82	60	0.00001172	64
+83	61	0.00001172	64
+84	62	0.00001172	64
+85	63	0.00001172	64
+86	64	0.00001172	64
+86	126	0.00002344	64
+87	65	0.00001172	64
+87	127	0.00002344	64
+88	66	0.00001172	64
+88	128	0.00002344	64
+89	67	0.00001172	64
+90	70	0.00001748	64
+91	71	0.00001748	64
+92	72	0.00001748	64
+93	73	0.00001748	64
+94	74	0.00001748	64
+94	133	0.0000292	64
+95	75	0.00001748	64
+95	134	0.0000292	64
+96	76	0.00001748	64
+96	135	0.0000292	64
+97	77	0.00001748	64
+98	78	0.00001758	64
+99	79	0.00001758	64
+100	80	0.00001758	64
+101	81	0.00001758	64
+102	81	0.00001758	64
+103	82	0.00001758	64
+103	138	0.0000293	64
+104	83	0.00001758	64
+104	139	0.0000293	64
+105	84	0.00001758	64
+105	140	0.0000293	64
+106	85	0.00001758	64
+107	85	0.00001758	64
+108	90	0.00001758	64
+109	90	0.00001758	0
+110	91	0.00001758	64
+110	146	0.0000293	64
+111	91	0.00001758	0
+111	146	0.0000293	0
+112	94	0.00001758	64
+113	95	0.00001758	64
+113	150	0.0000293	64
+114	104	0.00002334	64
+115	105	0.00002334	64
+115	157	0.00003506	64
+116	106	0.00002344	64
+117	106	0.00002344	64
+118	107	0.00002344	64
+118	159	0.00003516	64
+119	107	0.00002344	64
+119	159	0.00003516	64
+120	115	0.00002344	0
+120	167	1	0
+121	115	0.00002344	0
+121	167	1	0
+122	119	0.00002344	64
+123	119	0.00002344	0
+124	125	0.00002344	0
+124	169	1	0
+125	129	0.00002344	64
+126	132	0.0000292	0
+126	170	1.00000576	0
+127	136	0.0000292	64
+128	137	0.0000293	64
+128	171	1.00000586	64
+129	137	0.0000293	64
+129	171	1.00000586	64
+130	141	0.0000293	64
+131	141	0.0000293	64
+132	147	0.0000293	64
+133	147	0.0000293	0
+134	151	0.0000293	64
+135	158	0.00003506	64
+136	160	0.00003516	64
+137	160	0.00003516	64
+
